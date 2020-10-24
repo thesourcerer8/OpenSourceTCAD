@@ -6,7 +6,7 @@ FROM ubuntu:18.04
 RUN apt update --fix-missing
 ENV TZ=Europe/Vienna
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-RUN apt update && apt upgrade -y && apt install -y git
+RUN apt update && apt upgrade -y && apt install -y git vim python3-numpy
 
 RUN git clone --depth 1 https://github.com/devsim/devsim
 WORKDIR devsim
