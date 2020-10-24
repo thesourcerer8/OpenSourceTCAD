@@ -24,8 +24,10 @@ RUN tar xvzf charon-distrib-v2_1.tar.gz
 WORKDIR tcad-charon
 
 RUN git clone https://github.com/trilinos/Trilinos 
-RUN mkdir Trilinos/build
-WORKDIR Trilinos/build
+WORKDIR Trilinos
+RUN git checkout charon-release-v2.1-06.may.2020
+RUN mkdir build
+WORKDIR build
 RUN apt install -y libmatio-dev
 RUN cmake -DTrilinos_ENABLE_ALL_PACKAGES=ON -DCMAKE_INSTALL_PREFIX=/usr/local/ ..
 RUN cmake -DTPL_ENABLE_Matio=OFF -DCMAKE_INSTALL_PREFIX=/usr/local/ .
