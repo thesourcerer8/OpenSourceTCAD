@@ -14,4 +14,4 @@ RUN git submodule init
 RUN git submodule update
 RUN bash scripts/install_ubuntu_depend.sh
 RUN bash scripts/build_ubuntu_18.04.sh devsim_ubuntu_18.04
-
+ENV PYTHONPATH=/devsim/dist/devsim_ubuntu_18.04/lib
