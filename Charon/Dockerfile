@@ -34,4 +34,8 @@ RUN cmake -DTPL_ENABLE_Matio=OFF -DCMAKE_INSTALL_PREFIX=/usr/local/ .
 RUN make
 RUN make install
 
-WORKDIR /tcad_charon
+COPY FixedCMakeLists.txt /tcad-charon/test/nightlyTests/particleStrike/CMakeLists.txt.new
+RUN cp /tcad-charon/test/nightlyTests/particleStrike/CMakeLists.txt.new /tcad-charon/test/nightlyTests/particleStrike/CMakeLists.txt
+WORKDIR /tcad-charon/scripts/build/all
+RUN ./build_charon.py
+RUN make
