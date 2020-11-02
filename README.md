@@ -24,18 +24,20 @@ On other Linux distributions, please install Docker.io and afterwards run sudo b
 
     cd Genius
     sudo bash bash.sh
-    bin/genius.LINUX -i <inputfile>
+    #bin/genius.LINUX -i <inputfile>
     bin/genius.LINUX -i examples/MOS/2D/nmos1_quad.inp 
 
 # DevSim
 
     cd DevSim
     sudo bash bash.sh
-    python3 <inputfile>
+    #python3 <inputfile>
     cd testing
     python3 mos_2d.py
 
 # Charon
     cd Charon
     sudo bash bash.sh
-    charon_mp.exe --i=/tcad-charon/test/nightlyTests/bjt1dbasebc2c2907.dd.equ.xml
+    #charon_mp.exe --i=<inputfile>
+    cd /tcad-charon/test/nightlyTests/bjt1dbasebc
+    charon_mp.exe --i=2c2907.dd.equ.xml
