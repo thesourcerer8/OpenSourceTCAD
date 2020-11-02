@@ -39,3 +39,4 @@ RUN cp /tcad-charon/test/nightlyTests/particleStrike/CMakeLists.txt.new /tcad-ch
 WORKDIR /tcad-charon/scripts/build/all
 RUN ./build_charon.py
 RUN make
+RUN make install
