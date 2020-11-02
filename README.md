@@ -2,9 +2,9 @@
 Easy access to OpenSource TCAD Tools
 
 The repository contains Docker scripts to get various TCAD Tools running:
-* Charon
-* DevSim
-* Genius
+* Charon  (6.5 GB)
+* DevSim  (800 MB)
+* Genius  (1.8 GB)
 
 To be added:
 * ViennaMOS
