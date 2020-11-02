@@ -14,6 +14,7 @@ To be added:
 # Installation and Usage:
 
 If you have Debian/Ubuntu Linux you can use the install-ubuntu.sh script, which installs docker and builds the TCAD tools:
+Warning: The build process takes approximately 10 hours.
 
     ./install-ubuntu.sh
 
@@ -33,3 +34,8 @@ On other Linux distributions, please install Docker.io and afterwards run sudo b
     python3 <inputfile>
     cd testing
     python3 mos_2d.py
+
+# Charon
+    cd Charon
+    sudo bash bash.sh
+    charon_mp.exe --i=/tcad-charon/test/nightlyTests/bjt1dbasebc2c2907.dd.equ.xml
