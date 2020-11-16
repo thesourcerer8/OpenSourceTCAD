@@ -10,6 +10,8 @@ RUN apt update && apt upgrade -y && apt install -y build-essential cmake gfortra
 ### Install PETSC
 RUN wget http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-3.5.4.tar.gz
 RUN tar -xvf petsc-3.5.4.tar.gz
+RUN sed -i 's/crd.lbl.gov\/~xiaoye\/SuperLU/pdk.libresilicon.com/g' petsc-3.5.4/config/PETSc/packages/SuperLU.py
+
 WORKDIR petsc-3.5.4
 RUN ./configure --with-mpi=0 \
   		--with-debugging=0 --with-shared-libraries=0 --with-x=0 --with-pic=1 \
