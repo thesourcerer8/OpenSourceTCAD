@@ -2,9 +2,9 @@
 Easy access to OpenSource TCAD Tools
 
 The repository contains Docker scripts to get various TCAD Tools running:
-* Charon
-* DevSim
-* Genius
+* Charon  (6.5 GB)
+* DevSim  (800 MB)
+* Genius  (1.8 GB)
 
 To be added:
 * ViennaMOS
@@ -13,23 +13,34 @@ To be added:
 
 # Installation and Usage:
 
-If you have Debian/Ubuntu Linux you can use the install-ubuntu.sh script, which installs docker and builds the TCAD tools:
+If you have Debian/Ubuntu Linux you can use the install-ubuntu.sh script, which installs docker and builds all the TCAD tools:
+Warning: The build process takes approximately 10 hours.
 
     ./install-ubuntu.sh
 
+If you want to install just one of the tools, install the docker.io package, and then go to the directory of the tool and run "sudo bash build.sh".
 On other Linux distributions, please install Docker.io and afterwards run sudo bash build.sh in each tool directory you want.
+
+
 
 # Genius
 
     cd Genius
     sudo bash bash.sh
-    bin/genius.LINUX -i <inputfile>
+    #bin/genius.LINUX -i <inputfile>
     bin/genius.LINUX -i examples/MOS/2D/nmos1_quad.inp 
 
 # DevSim
 
     cd DevSim
     sudo bash bash.sh
-    python3 <inputfile>
+    #python3 <inputfile>
     cd testing
     python3 mos_2d.py
+
+# Charon
+    cd Charon
+    sudo bash bash.sh
+    #charon_mp.exe --i=<inputfile>
+    cd /tcad-charon/test/nightlyTests/bjt1dbasebc
+    charon_mp.exe --i=2c2907.dd.equ.xml
