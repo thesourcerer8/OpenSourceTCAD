@@ -24,7 +24,8 @@ RUN make
 
 ### Install CGNS
 WORKDIR /
-RUN curl -O -J -L https://sourceforge.net/projects/cgns/files/cgnslib_2.5/Release%205/cgnslib_2.5-5.tar.gz/download
+#RUN curl -O -J -L https://sourceforge.net/projects/cgns/files/cgnslib_2.5/Release%205/cgnslib_2.5-5.tar.gz/download
+RUN curl -O -J -L "https://downloads.sourceforge.net/project/cgns/cgnslib_2.5/Release%205/cgnslib_2.5-5.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fcgns%2Ffiles%2Fcgnslib_2.5%2FRelease%25205%2Fcgnslib_2.5-5.tar.gz%2Fdownload&ts=1605564219"
 RUN tar -xvf cgnslib_2.5-5.tar.gz
 WORKDIR cgnslib_2.5
 RUN chmod +x configure
@@ -61,3 +62,5 @@ RUN ./waf --prefix=$PWD \
 # set the enviroment enviroments
 ENV GENIUS_DIR /Genius-TCAD-Open
 ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH/:$GENIUS_DIR/lib:/usr/local/lib/
+
+RUN apt-get install -y paraview
