@@ -13,12 +13,15 @@ To be added:
 
 # Installation and Usage:
 
-If you have Debian/Ubuntu Linux you can use the install-ubuntu.sh script, which installs docker and builds the TCAD tools:
+If you have Debian/Ubuntu Linux you can use the install-ubuntu.sh script, which installs docker and builds all the TCAD tools:
 Warning: The build process takes approximately 10 hours.
 
     ./install-ubuntu.sh
 
+If you want to install just one of the tools, install the docker.io package, and then go to the directory of the tool and run "sudo bash build.sh".
 On other Linux distributions, please install Docker.io and afterwards run sudo bash build.sh in each tool directory you want.
+
+
 
 # Genius
 
