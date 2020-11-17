@@ -30,6 +30,7 @@ On other Linux distributions, please install Docker.io and afterwards run sudo b
     #bin/genius.LINUX -i <inputfile>
     bin/genius.LINUX -i examples/MOS/2D/nmos1_quad.inp 
     paraview nmos_quad.vtu
+    # Now click on the Apply button on the left and then click on the Combobox in the upper left area and select electrical_field
 
 # DevSim
 
