@@ -63,4 +63,4 @@ RUN ./waf --prefix=$PWD \
 ENV GENIUS_DIR /Genius-TCAD-Open
 ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH/:$GENIUS_DIR/lib:/usr/local/lib/
 
-RUN apt-get install -y paraview
+RUN apt-get install -y paraview libqt4-sql-sqlite 
