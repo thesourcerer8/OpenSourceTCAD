@@ -29,6 +29,7 @@ On other Linux distributions, please install Docker.io and afterwards run sudo b
     sudo bash bash.sh
     #bin/genius.LINUX -i <inputfile>
     bin/genius.LINUX -i examples/MOS/2D/nmos1_quad.inp 
+    paraview nmos_quad.vtu
 
 # DevSim
 
