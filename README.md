@@ -40,9 +40,11 @@ On other Linux distributions, please install Docker.io and afterwards run sudo b
     cd testing
     python3 mos_2d.py
 
-# Charon
+# Charon 
     cd Charon
     sudo bash bash.sh
     #charon_mp.exe --i=<inputfile>
     cd /tcad-charon/test/nightlyTests/bjt1dbasebc
     charon_mp.exe --i=2c2907.dd.equ.xml
+
+Charon User Manual: https://charon.sandia.gov/documentation/Charon_UserManual.pdf
