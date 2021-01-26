@@ -31,6 +31,7 @@ On other Linux distributions, please install Docker.io and afterwards run sudo b
     bin/genius.LINUX -i examples/MOS/2D/nmos1_quad.inp 
     paraview nmos_quad.vtu
     # Now click on the Apply button on the left and then click on the Combobox in the upper left area and select electrical_field
+Genius User Manual: https://www.i-vis.co.jp/pdf/cogenda/User_Guide.pdf
 
 # DevSim
 
@@ -39,6 +40,7 @@ On other Linux distributions, please install Docker.io and afterwards run sudo b
     #python3 <inputfile>
     cd testing
     python3 mos_2d.py
+DevSim User Manual: https://devsim.com/devsim_papers/devsim.pdf
 
 # Charon 
     cd Charon
