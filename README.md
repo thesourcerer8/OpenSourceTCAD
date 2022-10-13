@@ -50,3 +50,7 @@ DevSim User Manual: https://devsim.com/devsim_papers/devsim.pdf
     charon_mp.exe --i=2c2907.dd.equ.xml
 
 Charon User Manual: https://charon.sandia.gov/documentation/Charon_UserManual.pdf
+
+
+Other opensource TCAD systems:
+* https://www.iee.et.tu-dresden.de/iee/eb/forsch/AK-Bipo/2019/7-MOS-AK-Association_wgr_BipAK19.pdf
