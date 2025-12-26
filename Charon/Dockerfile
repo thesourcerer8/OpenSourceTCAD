@@ -6,8 +6,8 @@ FROM ubuntu:18.04
 RUN apt update --fix-missing
 RUN apt update && apt upgrade -y
 RUN apt install -y build-essential cmake gfortran git flex bison \
-        wget curl python python-sip-dev libglu1-mesa-dev freeglut3-dev mesa-common-dev hdf5-tools linux-headers-generic \
-        libhdf5-dev netcdf-bin cdftools libnetcdf-dev cmake libopenblas-dev libblas-dev libboost-all-dev screen htop
+    wget curl python python-sip-dev libglu1-mesa-dev freeglut3-dev mesa-common-dev hdf5-tools linux-headers-generic \
+    libhdf5-dev netcdf-bin cdftools libnetcdf-dev cmake libopenblas-dev libblas-dev libboost-all-dev screen htop
 RUN apt install -y git-lfs vim-scripts build-essential libssl-dev
 
 WORKDIR /
@@ -22,9 +22,9 @@ RUN make install
 
 WORKDIR /
 RUN git clone https://github.com/TriBITSPub/TriBITS.git
-#WORKDIR tribits
-#RUN git checkout -f 8d696d0bb0
-#WORKDIR /
+WORKDIR TriBITS
+RUN git checkout -f 8d696d0bb0
+WORKDIR /
 RUN mv TriBITS tribits
 RUN mkdir tribits/build
 WORKDIR tribits/build
@@ -34,17 +34,18 @@ RUN make install
 ENV TRIBITS_BASE_DIR='/tribits'
 
 WORKDIR /
-RUN wget https://www.idi.moe/files/charon/charon-distrib-v2_1.tar.gz
-RUN mv charon-distrib-v2_1.tar.gz charon-distrib.tar.gz
+RUN wget https://www.sandia.gov/app/uploads/sites/106/2022/06/charon-distrib-v2_2.tar.gz
+RUN mv charon-distrib-v2_2.tar.gz charon-distrib.tar.gz
 RUN tar hxvzf charon-distrib.tar.gz
 WORKDIR tcad-charon
+RUN cd scripts/charonInterpreter/parseGenerator && python3 generateInterpreter.py
 RUN ls scripts/build/all
 RUN /bin/bash
 
 
-RUN git clone https://github.com/trilinos/Trilinos.git
+RUN git clone https://github.com/trilinos/Trilinos.git Trilinos
 WORKDIR Trilinos
-RUN git checkout charon-release-v2.1-06.may.2020
+RUN git checkout 81e9581a3c5
 RUN mkdir build
 WORKDIR build
 RUN apt install -y libmatio-dev
